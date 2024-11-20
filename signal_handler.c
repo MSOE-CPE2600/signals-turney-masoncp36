@@ -5,22 +5,23 @@
 
 /**
  * Modified by:
- * 
+ * Chance Mason, Signals, CPE-2600 121
  * Brief summary of modifications:
+ * Using the signal handler method when receiving a signal the program kills and exits.
  */
 
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <signal.h>
 #include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * @brief Signal handler for SIGINT - prints a message and exits
+ * @brief Signal handler for SIGINT - prints a message and sends SIGKILL to itself
  */
 void handle_signal() {
     printf("Received a signal\n");
-    exit(1);
+    kill(getpid(), SIGKILL); // Send SIGKILL to the current process
 }
 
 int main() {
