@@ -1,7 +1,7 @@
 /**
  * File: signal_alarm.c
  * Modified by:
- * Chance Mason, Signals
+ * Chance Mason, Signals, CPE-2600 121
  * Brief summary of program:
  * This program handles an alarm signal and schedules 
  * for it to be sent after 5 seconds then exits when it is received
